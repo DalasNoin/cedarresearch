@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CEDAR — Communicating Evidence and Demonstrations of AI Risk</title>
+<meta name="description" content="CEDAR is a research organisation making the trajectory of AI legible through original research, technical demonstrations, and public communication.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1b211d;
+    --accent: #2f5140;
+    --faint: #6b746d;
+    --hairline: rgba(27, 33, 29, 0.15);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151a16;
+      --ink: #e6eae6;
+      --accent: #8fb3a0;
+      --faint: #8b948c;
+      --hairline: rgba(230, 234, 230, 0.18);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 560px;
+    margin: 0 auto;
+    padding: 18vh 24px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  header { text-align: left; }
+  .wordmark {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    margin: 0;
+  }
+  .expansion {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  p { margin: 0; font-size: 16px; }
+  .work { display: flex; flex-direction: column; gap: 10px; }
+  .work-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .work a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline);
+    padding-bottom: 1px;
+    width: fit-content;
+  }
+  .work a:hover, .work a:focus-visible { border-bottom-color: var(--accent); color: var(--accent); }
+  .work .src { color: var(--faint); }
+  footer {
+    border-top: 1px solid var(--hairline);
+    padding-top: 24px;
+    font-size: 14px;
+    color: var(--faint);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover, footer a:focus-visible { text-decoration: underline; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1 class="wordmark">CEDAR</h1>
+    <div class="expansion">Communicating Evidence and Demonstrations of AI&nbsp;Risk</div>
+  </header>
+
+  <p>
+    CEDAR is a research organisation making the trajectory of AI legible.
+    We produce original research and technical demonstrations of what AI
+    systems can already do, and translate the evidence for the public and
+    for decision makers. Our current focus is mass deanonymisation and
+    AI-enabled surveillance.
+  </p>
+
+  <div class="work">
+    <div class="work-label">Work</div>
+    <a href="https://arxiv.org/abs/2602.16800">Large-Scale Online Deanonymization With LLMs <span class="src">— arXiv</span></a>
+    <a href="https://www.theguardian.com/technology/2026/mar/08/ai-hackers-social-media-accounts-study">Coverage in the Guardian <span class="src">— March 2026</span></a>
+    <a href="https://www.nytimes.com/2026/03/17/opinion/ai-economy-trump-future.html">Cited in the New York Times <span class="src">— Opinion, March 2026</span></a>
+  </div>
+
+  <footer>
+    Contact: <a href="mailto:info@cedarresearch.org">info@cedarresearch.org</a><br>
+    Simon Lermen, Founder · London
+  </footer>
+</main>
+</body>
+</html>
