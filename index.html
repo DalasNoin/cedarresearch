@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CEDAR</title>
-<meta name="description" content="CEDAR — Communicating Evidence and Demonstrations of AI Risk.">
+<meta name="description" content="Cedar. Demonstrations and research on the risks of AI.">
 <style>
   :root {
     --bg: #ffffff;
@@ -57,12 +57,101 @@
     padding-bottom: 1px;
   }
   .paper a:hover, .paper a:focus-visible { border-bottom-color: var(--accent); }
+
+  .signup { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+  .signup-label {
+    font-size: 13px;
+    color: var(--faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .signup-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .signup input[type="email"] {
+    font: inherit;
+    font-size: 14px;
+    padding: 9px 12px;
+    min-width: 240px;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--hairline);
+    border-radius: 3px;
+  }
+  .signup input[type="email"]::placeholder { color: var(--faint); }
+  .signup input[type="email"]:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .signup button {
+    font: inherit;
+    font-size: 14px;
+    padding: 9px 18px;
+    color: var(--bg);
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .signup button:hover, .signup button:focus-visible { opacity: 0.85; }
+  .signup-note { font-size: 12px; color: var(--faint); }
+  /* honeypot, hidden from people but visible to bots */
+  .signup .hp { position: absolute; left: -9999px; opacity: 0; }
 </style>
 </head>
 <body>
 <main>
   <h1 class="wordmark">CEDAR</h1>
   <p class="paper"><a href="https://arxiv.org/abs/2602.16800">Large-Scale Online Deanonymization With LLMs</a></p>
+  <p class="paper"><a href="/jobs.html">We are hiring</a></p>
+
+  <!-- Posts to a Google Apps Script web app that appends to a Sheet. See SIGNUP-SETUP.md -->
+  <form class="signup" id="signup">
+    <label class="signup-label" for="email">Sign up for updates</label>
+    <div class="signup-row">
+      <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+      <button type="submit">Subscribe</button>
+    </div>
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <p class="signup-note" id="signup-note">Occasional updates on our research. No tracking, unsubscribe any time.</p>
+  </form>
 </main>
+<script>
+  // Paste the Apps Script web app URL here after deploying. See SIGNUP-SETUP.md
+  var SIGNUP_ENDPOINT = "REPLACE_WITH_APPS_SCRIPT_URL";
+
+  (function () {
+    var form = document.getElementById("signup");
+    var note = document.getElementById("signup-note");
+    var button = form.querySelector("button");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var email = form.email.value.trim();
+      if (!email) return;
+
+      if (SIGNUP_ENDPOINT.indexOf("http") !== 0) {
+        note.textContent = "Sign-up is not configured yet.";
+        return;
+      }
+
+      button.disabled = true;
+      note.textContent = "Sending...";
+
+      // text/plain avoids a CORS preflight; no-cors means we cannot read the
+      // response, so we confirm optimistically. The row still lands in the Sheet.
+      fetch(SIGNUP_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ email: email, website: form.website.value })
+      }).then(function () {
+        form.reset();
+        note.textContent = "Thanks, you are on the list.";
+      }).catch(function () {
+        note.textContent = "Something went wrong. Try again later.";
+        button.disabled = false;
+      });
+    });
+  })();
+</script>
 </body>
 </html>

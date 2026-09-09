@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CEDAR — Jobs</title>
+<meta name="description" content="Open roles at Cedar. Demonstrations and research on the risks of AI.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1b211d;
+    --accent: #2f5140;
+    --faint: #6b746d;
+    --hairline: rgba(27, 33, 29, 0.15);
+    --card: rgba(27, 33, 29, 0.03);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151a16;
+      --ink: #e6eae6;
+      --accent: #8fb3a0;
+      --faint: #8b948c;
+      --hairline: rgba(230, 234, 230, 0.18);
+      --card: rgba(230, 234, 230, 0.04);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 24px 96px; }
+  header { margin-bottom: 56px; }
+  .wordmark {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: 0.42em;
+    margin: 0 -0.42em 0 0;
+    color: var(--ink);
+    text-decoration: none;
+  }
+  h1 { font-size: 30px; font-weight: 600; margin: 40px 0 12px; letter-spacing: -0.01em; }
+  .lede { color: var(--faint); font-size: 16px; margin: 0; }
+  .role {
+    border: 1px solid var(--hairline);
+    background: var(--card);
+    border-radius: 6px;
+    padding: 28px 28px 24px;
+    margin: 28px 0;
+  }
+  .role h2 { font-size: 21px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { font-size: 13px; color: var(--faint); margin: 0 0 16px; }
+  .meta span { white-space: nowrap; }
+  .meta span + span::before { content: "  \00B7  "; }
+  .role p { font-size: 15px; margin: 12px 0; }
+  .role h3 {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 20px 0 8px;
+  }
+  .role ul { margin: 0; padding-left: 20px; font-size: 15px; }
+  .role li { margin: 6px 0; }
+  a { color: var(--accent); }
+  .apply { margin-top: 56px; font-size: 15px; }
+  .apply a { font-weight: 500; }
+  .back { display: inline-block; margin-top: 48px; font-size: 14px; color: var(--faint); text-decoration: none; }
+  .back:hover { color: var(--accent); }
+  .foot { margin-top: 24px; font-size: 13px; color: var(--faint); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="wordmark" href="/">CEDAR</a>
+    <h1>Open roles</h1>
+    <p class="lede">Cedar builds demonstrations of what AI can already do, from mass surveillance to autonomous misuse, and turns them into research that reaches the press, policymakers, and institutions like the UK AI Security Institute. Our deanonymisation work was covered by the Guardian and the New York Times. We are small, early, and funded. We are hiring our first people.</p>
+  </header>
+
+  <section class="role">
+    <h2>Technical Specialist: jailbreaking and agent swarms</h2>
+    <p class="meta"><span>Full time</span><span>London or remote</span><span>$90,000 to $100,000</span></p>
+    <p>We are hiring a technical specialist to build our next demonstrations: the ones about broken safeguards and autonomous AI agents. You would be building the demos, not maintaining someone else's, with high ownership and real public impact when the work lands.</p>
+
+    <h3>What you would work on</h3>
+    <ul>
+      <li>Jailbreaking and safeguard evaluation. Red-team open-weight and frontier models, remove refusals, and test whether the tamper-resistance methods labs rely on for safe open release actually survive a determined attack.</li>
+      <li>Agent swarms. Build and study systems of many AI agents working together: how much they can accomplish autonomously, where the risks concentrate, and what the automation of open-ended technical work looks like, including the recursive self-improvement question.</li>
+      <li>Making it land. Every demo comes with a rigorous writeup and a version a non-expert can understand.</li>
+    </ul>
+
+    <h3>Who you might be</h3>
+    <ul>
+      <li>Strong hands-on ML engineering. You can stand up a model, an evaluation harness, and an agent loop, and make them work.</li>
+      <li>Real interest in adversarial ML, red-teaming, or AI safety, and you take the risks seriously.</li>
+      <li>Thoughtful about the dual-use nature of this work. We report that capabilities exist and how cheap they are. We do not publish how-to.</li>
+      <li>Bonus: prior red-teaming, jailbreaking, agent-framework, or open-weights work. Show us something you built or broke.</li>
+    </ul>
+  </section>
+
+  <section class="role">
+    <h2>Communications and Research Generalist</h2>
+    <p class="meta"><span>Full time</span><span>London or remote</span><span>$85,000 to $95,000</span></p>
+    <p>A generalist role for someone who wants to both shape the message and help make the thing. In any given week you might write a long-form piece explaining a new result, help field a human study, cut a short video from a demo, and run the channels that carry it all. It suits a strong writer, comfortable with research and data, happy wearing several hats in a small team.</p>
+
+    <h3>What you would do</h3>
+    <ul>
+      <li>Communicate the work. Write and adapt across short and long form, making complex AI capabilities clear without dumbing them down.</li>
+      <li>Run the channels. Own the publishing cadence across social, newsletter, and the site, and build an audience rather than just posting.</li>
+      <li>Help produce the research. Support our human studies and demos, from recruitment and materials to turning results into something publishable and shareable.</li>
+      <li>Reach the right people. Get our work in front of press, policymakers, and partner organisations, not only the general public.</li>
+    </ul>
+
+    <h3>Who you might be</h3>
+    <ul>
+      <li>A strong writer who can make hard technical material accessible and is genuinely interested in AI risk.</li>
+      <li>A generalist comfortable moving between writing, media, and hands-on research support.</li>
+      <li>Ideally one to four years of relevant experience, though we care more about range and judgement than years.</li>
+      <li>Bonus: video and short-form production, basic data literacy, prior work in AI, policy, or research.</li>
+    </ul>
+  </section>
+
+  <div class="apply">
+    <p>To apply, email <a href="mailto:simonlermenai@gmail.com?subject=Cedar%20application">simonlermenai@gmail.com</a> with a short note on why the role fits, a CV, and a link to something you have made. Mention which role. We read everything.</p>
+    <p class="foot">Roles are offered through our fiscal sponsor. We welcome applicants from any background.</p>
+  </div>
+
+  <a class="back" href="/">&larr; Back to cedarresearch.org</a>
+</div>
+</body>
+</html>
