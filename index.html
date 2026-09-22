@@ -58,6 +58,16 @@
   }
   .paper a:hover, .paper a:focus-visible { border-bottom-color: var(--accent); }
 
+  .nav { font-size: 13px; color: var(--faint); letter-spacing: 0.06em; text-transform: uppercase; }
+  .nav a {
+    color: var(--faint);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+  }
+  .nav a:hover, .nav a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+  .nav span + span::before { content: "  \00B7  "; }
+
   .signup { display: flex; flex-direction: column; gap: 10px; align-items: center; }
   .signup-label {
     font-size: 13px;
@@ -112,6 +122,8 @@
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <p class="signup-note" id="signup-note">Occasional updates on our research.</p>
   </form>
+
+  <p class="nav"><span><a href="/team.html">Team</a></span><span><a href="/jobs.html">Jobs</a></span></p>
 </main>
 <script>
   // Paste the Apps Script web app URL here after deploying. See SIGNUP-SETUP.md
