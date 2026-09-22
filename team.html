@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CEDAR — Team</title>
-<meta name="description" content="The people behind Cedar. Research and demonstrations on the risks of AI.">
+<meta name="description" content="The team behind Cedar.">
 <style>
   :root {
     --bg: #ffffff;
@@ -33,25 +33,41 @@
     -webkit-font-smoothing: antialiased;
     line-height: 1.55;
   }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 72px 24px 96px; }
-  header { margin-bottom: 48px; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 32px 24px 96px; }
+  .topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+  }
   .wordmark {
     display: inline-block;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
     letter-spacing: 0.42em;
     margin: 0 -0.42em 0 0;
     color: var(--ink);
     text-decoration: none;
   }
-  h1 { font-size: 28px; font-weight: 600; margin: 40px 0 12px; letter-spacing: -0.01em; }
-  .lede { color: var(--faint); font-size: 16px; margin: 0; }
+  .nav { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .nav a {
+    color: var(--faint);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+  }
+  .nav a:hover, .nav a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+  .nav a[aria-current="page"] { color: var(--ink); }
+  .nav span + span::before { content: "  \00B7  "; color: var(--faint); }
+
+  h1 { font-size: 28px; font-weight: 600; margin: 0 0 24px; letter-spacing: -0.01em; }
   .person {
     border: 1px solid var(--hairline);
     background: var(--card);
     border-radius: 6px;
-    padding: 24px 26px;
-    margin: 24px 0;
+    padding: 22px 26px;
   }
   .person h2 { font-size: 20px; font-weight: 600; margin: 0 0 2px; letter-spacing: -0.01em; }
   .role-title {
@@ -59,51 +75,26 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--accent);
-    margin: 0 0 14px;
+    margin: 0 0 12px;
   }
-  .person p { font-size: 15px; margin: 12px 0; }
-  .person p:last-child { margin-bottom: 0; }
+  .person p { font-size: 15px; margin: 0; }
   a { color: var(--accent); }
-  .hiring {
-    margin-top: 48px;
-    padding-top: 28px;
-    border-top: 1px solid var(--hairline);
-  }
-  .hiring h2 { font-size: 20px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em; }
-  .hiring p { font-size: 15px; margin: 10px 0; }
-  .hiring ul { margin: 12px 0 0; padding-left: 20px; font-size: 15px; }
-  .hiring li { margin: 5px 0; }
-  .back { display: inline-block; margin-top: 40px; font-size: 14px; color: var(--faint); text-decoration: none; }
-  .back:hover { color: var(--accent); }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
+  <div class="topbar">
     <a class="wordmark" href="/">CEDAR</a>
-    <h1>Team</h1>
-    <p class="lede">Cedar works on communicating the risks of AI, from mass surveillance to the catastrophic threats posed by advanced AI, through research demonstrations and human studies.</p>
-  </header>
+    <p class="nav"><span><a href="/team.html" aria-current="page">Team</a></span><span><a href="/jobs.html">Jobs</a></span></p>
+  </div>
+
+  <h1>Team</h1>
 
   <section class="person">
     <h2>Simon Lermen</h2>
-    <p class="role-title">Founder</p>
-    <p>Simon researches what AI systems can already do to people, and works to make those capabilities legible to the public and to policymakers before they are deployed at scale.</p>
-    <p>He is the author of <a href="https://arxiv.org/abs/2602.16800">Large-Scale Online Deanonymization With LLMs</a>, which showed that language models can identify people at scale from ordinary public writing. The work was covered by the Guardian and the New York Times.</p>
-    <p>He is a researcher at MATS and is based in London.</p>
+    <p class="role-title">Director</p>
+    <p>Author of <a href="https://arxiv.org/abs/2602.16800">Large-Scale Online Deanonymization With LLMs</a>. Researcher at MATS, based in London.</p>
   </section>
-
-  <div class="hiring">
-    <h2>We are hiring</h2>
-    <p>Cedar is small, funded, and hiring its first people. Two roles are open:</p>
-    <ul>
-      <li><a href="/jobs.html#technical">Technical Specialist</a></li>
-      <li><a href="/jobs.html#communications">Communications and Outreach</a></li>
-    </ul>
-    <p><a href="/jobs.html">See both roles and how to apply</a></p>
-  </div>
-
-  <a class="back" href="/">&larr; Back to cedarresearch.org</a>
 </div>
 </body>
 </html>

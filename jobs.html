@@ -34,17 +34,35 @@
     -webkit-font-smoothing: antialiased;
     line-height: 1.55;
   }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 72px 24px 96px; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 32px 24px 96px; }
   header { margin-bottom: 48px; }
+  .topbar {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+  }
   .wordmark {
     display: inline-block;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 500;
     letter-spacing: 0.42em;
     margin: 0 -0.42em 0 0;
     color: var(--ink);
     text-decoration: none;
   }
+  .nav { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .nav a {
+    color: var(--faint);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 1px;
+  }
+  .nav a:hover, .nav a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+  .nav a[aria-current="page"] { color: var(--ink); }
+  .nav span + span::before { content: "  \00B7  "; color: var(--faint); }
   h1 { font-size: 28px; font-weight: 600; margin: 40px 0 12px; letter-spacing: -0.01em; }
   .lede { color: var(--faint); font-size: 16px; margin: 0; }
   .role {
@@ -82,8 +100,12 @@
 </head>
 <body>
 <div class="wrap">
-  <header>
+  <div class="topbar">
     <a class="wordmark" href="/">CEDAR</a>
+    <p class="nav"><span><a href="/team.html">Team</a></span><span><a href="/jobs.html" aria-current="page">Jobs</a></span></p>
+  </div>
+
+  <header>
     <h1>Open roles</h1>
     <p class="lede">Cedar works on communicating the risks of AI, from mass surveillance to the catastrophic threats posed by advanced AI, through research and human studies. We are small, funded, and hiring our first people.</p>
   </header>
@@ -131,7 +153,6 @@
 
   <div class="apply">
     <p>To apply, email <a href="mailto:jobs@cedarresearch.org?subject=Cedar%20application">jobs@cedarresearch.org</a> with a short note, a CV, and a link to something you have made. Mention which role.</p>
-    <p>You would be working with <a href="/team.html">the team</a>.</p>
   </div>
 
   <a class="back" href="/">&larr; Back to cedarresearch.org</a>

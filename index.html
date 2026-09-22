@@ -58,7 +58,16 @@
   }
   .paper a:hover, .paper a:focus-visible { border-bottom-color: var(--accent); }
 
-  .nav { font-size: 13px; color: var(--faint); letter-spacing: 0.06em; text-transform: uppercase; }
+  .nav {
+    position: absolute;
+    top: 26px;
+    right: 28px;
+    margin: 0;
+    font-size: 13px;
+    color: var(--faint);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
   .nav a {
     color: var(--faint);
     text-decoration: none;
@@ -122,9 +131,8 @@
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <p class="signup-note" id="signup-note">Occasional updates on our research.</p>
   </form>
-
-  <p class="nav"><span><a href="/team.html">Team</a></span><span><a href="/jobs.html">Jobs</a></span></p>
 </main>
+<p class="nav"><span><a href="/team.html">Team</a></span><span><a href="/jobs.html">Jobs</a></span></p>
 <script>
   // Paste the Apps Script web app URL here after deploying. See SIGNUP-SETUP.md
   var SIGNUP_ENDPOINT = "REPLACE_WITH_APPS_SCRIPT_URL";
