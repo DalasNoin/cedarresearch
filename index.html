@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CEDAR</title>
+<title>Cedar Research</title>
 <meta name="description" content="Cedar. Demonstrations and research on the risks of AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #ffffff;
@@ -41,10 +44,29 @@
     gap: 48px;
   }
   .wordmark {
-    font-size: 34px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    color: var(--accent);
+    text-decoration: none;
+    margin: 0;
+  }
+  .wordmark .wm-name {
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 64px;
+    letter-spacing: -0.025em;
+  }
+  .wordmark .wm-sub {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
     font-weight: 500;
-    letter-spacing: 0.42em;
-    margin: 0 -0.42em 0 0;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-right: -0.38em;
   }
   .paper {
     font-size: 14px;
@@ -118,7 +140,7 @@
 </head>
 <body>
 <main>
-  <h1 class="wordmark">CEDAR</h1>
+  <h1 class="wordmark" aria-label="Cedar Research"><span class="wm-name">cedar</span><span class="wm-sub">Research</span></h1>
   <p class="paper"><a href="https://arxiv.org/abs/2602.16800">Large-Scale Online Deanonymization With LLMs</a></p>
 
   <!-- Posts to a Google Apps Script web app that appends to a Sheet. See SIGNUP-SETUP.md -->

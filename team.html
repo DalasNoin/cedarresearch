@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CEDAR — Team</title>
+<title>Cedar Research — Team</title>
 <meta name="description" content="The team behind Cedar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400..600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #ffffff;
@@ -43,13 +46,29 @@
     margin-bottom: 56px;
   }
   .wordmark {
-    display: inline-block;
-    font-size: 22px;
-    font-weight: 500;
-    letter-spacing: 0.42em;
-    margin: 0 -0.42em 0 0;
-    color: var(--ink);
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+    color: var(--accent);
     text-decoration: none;
+    margin: 0;
+  }
+  .wordmark .wm-name {
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: -0.025em;
+  }
+  .wordmark .wm-sub {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.38em;
+    text-transform: uppercase;
+    margin-top: 6px;
+    margin-right: -0.38em;
   }
   .nav { font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
   .nav a {
@@ -84,7 +103,7 @@
 <body>
 <div class="wrap">
   <div class="topbar">
-    <a class="wordmark" href="/">CEDAR</a>
+    <a class="wordmark" href="/" aria-label="Cedar Research, home"><span class="wm-name">cedar</span><span class="wm-sub">Research</span></a>
     <p class="nav"><span><a href="/team.html" aria-current="page">Team</a></span><span><a href="/jobs.html">Jobs</a></span></p>
   </div>
 
