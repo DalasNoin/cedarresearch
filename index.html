@@ -99,6 +99,10 @@
   .nav a:hover, .nav a:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
   .nav span + span::before { content: "  \00B7  "; }
 
+  .donate { align-self: center; display: inline-block; padding: 11px 24px; border: 1px solid var(--accent); border-radius: 3px; background: var(--accent); color: var(--bg); font-size: 14px; text-decoration: none; }
+  .donate:hover { opacity: 0.85; }
+  .donate:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
   .signup { display: flex; flex-direction: column; gap: 10px; align-items: center; }
   .signup-label {
     font-size: 13px;
@@ -153,6 +157,7 @@
     <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <p class="signup-note" id="signup-note">Occasional updates on our research.</p>
   </form>
+  <a class="donate" href="https://www.every.org/cedar-research?code=c832da6e#/donate">Donate</a>
 </main>
 <p class="nav"><span><a href="/team.html">Team</a></span><span><a href="/jobs.html">Jobs</a></span></p>
 <script>
